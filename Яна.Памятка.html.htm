@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Роль педагога в развитии лидерских качеств у детей — памятка</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #0f172a;
+      --panel: #111827;
+      --card: #0b1220;
+      --text: #e5e7eb;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+      --accent-2: #a78bfa;
+      --line: #1f2937;
+      --ok: #22c55e;
+      --warn: #f59e0b;
+      --bad: #ef4444;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 80% -10%,rgba(56,189,248,.25),transparent),radial-gradient(900px 500px at -10% 10%,rgba(167,139,250,.25),transparent),var(--bg); color:var(--text); font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;}
+    a{color:var(--accent)}
+    .container{max-width:1100px;margin:0 auto;padding:24px}
+    .nav{position:sticky;top:0;z-index:40;backdrop-filter:saturate(160%) blur(10px); background:rgba(2,6,23,.7); border-bottom:1px solid var(--line)}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:900;letter-spacing:.3px}
+    .brand .logo{width:34px;height:34px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2)); display:grid;place-items:center;box-shadow:var(--shadow)}
+    .brand .logo span{font-weight:900;color:#0b1220}
+    .nav a{font-weight:600;text-decoration:none;margin-left:18px;color:var(--muted)}
+    .hero{padding:54px 24px 26px}
+    .hero-wrap{display:grid;gap:18px;grid-template-columns:1.4fr 1fr;align-items:center}
+    .hero h1{font-size:40px;line-height:1.15;margin:0}
+    .tagline{font-size:18px;color:var(--muted)}
+    .hero-card{background:linear-gradient(180deg,rgba(56,189,248,.08),rgba(56,189,248,.02)); border:1px solid var(--line); padding:18px;border-radius:18px}
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .chip{background:rgba(167,139,250,.15);border:1px solid rgba(167,139,250,.35);color:#e9d5ff;padding:8px 12px;border-radius:999px;font-weight:600;font-size:14px}
+    .cta{display:flex;gap:12px;margin-top:14px}
+    .btn{padding:12px 16px;border-radius:12px;border:1px solid var(--line);background:#0b1220;color:var(--text);font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:var(--shadow)}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#0b1220}
+    .grid{display:grid;gap:18px}
+    .cols-3{grid-template-columns:repeat(3,1fr)}
+    .cols-2{grid-template-columns:repeat(2,1fr)}
+    .card{background:linear-gradient(180deg,rgba(2,6,23,.7),rgba(2,6,23,.9));border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow)}
+    .card h3{margin:0 0 8px 0;font-size:20px}
+    .card p{margin:0;color:var(--muted)}
+    .list{display:grid;gap:10px;margin:0;padding:0}
+    .list li{list-style:none;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start;background:rgba(255,255,255,.02);border:1px solid var(--line);padding:12px;border-radius:14px}
+    .list .icon{font-size:20px}
+    .section{padding:28px 0}
+    .section h2{margin:0 0 12px 0;font-size:28px}
+    .badge{display:inline-flex;gap:8px;align-items:center;font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#0b1220;background:linear-gradient(135deg,var(--accent),var(--accent-2));padding:8px 12px;border-radius:999px}
+    .kpi{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+    .kpi .item{flex:1 1 160px;background:rgba(56,189,248,.08);border:1px dashed rgba(56,189,248,.35);padding:14px;border-radius:14px}
+    .kpi .item .num{font-weight:900;font-size:28px}
+    .kpi .item .cap{color:var(--muted);font-size:13px}
+    .tips{display:grid;gap:12px}
+    .tip{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start;background:rgba(34,197,94,.09);border:1px solid rgba(34,197,94,.35);padding:12px;border-radius:14px}
+    .tip.warn{background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.35)}
+    .tip.bad{background:rgba(239,68,68,.08);border-color:rgba(239,68,68,.35)}
+    .steps{counter-reset:step}
+    .steps li{list-style:none;position:relative;padding-left:44px;margin:14px 0}
+    .steps li::before{counter-increment:step;content:counter(step);position:absolute;left:0;top:0;width:32px;height:32px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#0b1220;display:grid;place-items:center;font-weight:900}
+    .footer{margin-top:22px;padding:18px;border-top:1px solid var(--line);color:var(--muted);display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+    .sticky-bar{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:10px;z-index:50}
+    .mini{padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:rgba(2,6,23,.8);backdrop-filter:blur(8px);color:var(--text);font-weight:700}
+    .mini:hover{transform:translateY(-2px)}
+    .anchor{scroll-margin-top:90px}
+    @media(max-width:980px){
+      .hero-wrap{grid-template-columns:1fr}
+      .cols-3{grid-template-columns:1fr}
+      .cols-2{grid-template-columns:1fr}
+      .nav a{margin-left:10px}
+      .hero h1{font-size:32px}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner container">
+      <div class="brand">
+        <div class="logo"><span>★</span></div>
+        <div>Памятка педагога</div>
+      </div>
+      <nav>
+        <a href="#role">Роль педагога</a>
+        <a href="#methods">Методы</a>
+        <a href="#practice">Практика</a>
+        <a href="#checklist">Чек‑лист</a>
+        <a href="#mistakes">Ошибки</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero container">
+    <div class="hero-wrap">
+      <div>
+        <div class="badge">🎓 Памятка для учителя</div>
+        <h1>Роль педагога в развитии лидерских качеств у детей 🌟</h1>
+        <p class="tagline">Лидер не рождается один. Лидерство растит среда. Учитель создаёт эту среду каждый день</p>
+        <div class="chips">
+          <div class="chip">🤝 Доверие</div>
+          <div class="chip">🧭 Инициатива</div>
+          <div class="chip">🗣️ Коммуникация</div>
+          <div class="chip">🧩 Ответственность</div>
+          <div class="chip">💡 Творчество</div>
+        </div>
+        <div class="cta">
+
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3>Зачем развивать лидерство у детей 🧒</h3>
+        <div class="kpi">
+          <div class="item"><div class="num">+ Командная работа</div><div class="cap">учатся договариваться и слушать</div></div>
+          <div class="item"><div class="num">+ Самостоятельность</div><div class="cap">берут задачи и доводят до результата</div></div>
+          <div class="item"><div class="num">+ Инициатива</div><div class="cap">предлагают идеи и улучшают процессы</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="role" class="section anchor">
+      <h2>Ключевая роль педагога 👩‍🏫</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Модель поведения ✨</h3>
+          <p>Учитель показывает пример спокойного лидерства. Уважительное общение. Чёткие границы. Готовность признать ошибку. Детям нужен живой образец</p>
+        </div>
+        <div class="card">
+          <h3>Дизайн среды 🏗️</h3>
+          <p>Класс как тренажёр лидерства. Зоны ответственности. Командные роли. Регулярные мини‑проекты с результатом</p>
+        </div>
+        <div class="card">
+          <h3>Наставничество 🤲</h3>
+          <p>Тёплая поддержка. Индивидуальная обратная связь. Поощрение проб и ошибок. Переход от контроля к доверию</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="methods" class="section anchor">
+      <h2>Методы и приёмы 🚀</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Ежедневные практики</h3>
+          <ul class="list">
+            <li><div class="icon">🗳️</div><div><b>Дежурный лидер дня</b> отвечает за старт урока и итоги. Меняется каждый день</div></li>
+            <li><div class="icon">🗣️</div><div><b>Круг идей</b> один тезис. одна минута. каждый говорит</div></li>
+            <li><div class="icon">🧩</div><div><b>Ролевые задания</b> фасилитатор. тайм‑кипер. аналитик. спикер</div></li>
+            <li><div class="icon">💬</div><div><b>Комплимент дня</b> один факт о вкладе одноклассника</div></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Проектные форматы</h3>
+          <ul class="list">
+            <li><div class="icon">📦</div><div><b>Проект за неделю</b> короткий цикл с защитой и реальным результатом</div></li>
+            <li><div class="icon">🧭</div><div><b>Сервисное обучение</b> решение пользы для школы или двора</div></li>
+            <li><div class="icon">🎯</div><div><b>Лидерский челлендж</b> индивидуальная цель и дневник прогресса</div></li>
+            <li><div class="icon">🤝</div><div><b>Верстка команды</b> осознанный выбор ролей и правил</div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="practice" class="section anchor">
+      <h2>Примеры заданий для урока 🧪</h2>
+      <div class="grid cols-3">
+        <div class="card">
+          <h3>Мини‑дебаты 🔎</h3>
+          <p>Две команды. один модератор из класса. задача модератора удержать регламент и итог</p>
+        </div>
+        <div class="card">
+          <h3>Дизайн‑спринт 💡</h3>
+          <p>Один урок. одна проблема школы. генерация идей. выбор лучшей. план внедрения</p>
+        </div>
+        <div class="card">
+          <h3>Карта сильных сторон 🧠</h3>
+          <p>Каждый отмечает три сильные стороны и одну зону роста. дальше обмен поддержкой</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="checklist" class="section anchor">
+      <h2>Чек‑лист наблюдения 👀</h2>
+      <div class="tips">
+        <div class="tip"><div>✅</div><div><b>Ученик берёт инициативу</b> предлагает идеи без принуждения</div></div>
+        <div class="tip"><div>✅</div><div><b>Ученик слушает команду</b> переспрашивает. уточняет. подводит итог</div></div>
+        <div class="tip"><div>✅</div><div><b>Ученик держит слово</b> обещал и выполнил к сроку</div></div>
+        <div class="tip"><div>✅</div><div><b>Ученик поддерживает других</b> видит вклад одноклассников и говорит об этом</div></div>
+      </div>
+    </section>
+
+    <section id="mistakes" class="section anchor">
+      <h2>Типичные ошибки и как избежать 🧯</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Не стоит делать</h3>
+          <ul class="list">
+            <li><div class="icon">🚫</div><div>Выбирать одного звезду на весь год. это бьёт по мотивации класса</div></li>
+            <li><div class="icon">🚫</div><div>Подменять лидерство властью. крики и давление рождают страх</div></li>
+            <li><div class="icon">🚫</div><div>Хвалить только результат. процесс тоже важен</div></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Как правильно</h3>
+          <ul class="list">
+            <li><div class="icon">✅</div><div>Ротация ролей и прозрачные правила</div></li>
+            <li><div class="icon">✅</div><div>Добрая и точная обратная связь. формула плюс. зона роста. шаг</div></li>
+            <li><div class="icon">✅</div><div>Связь заданий с жизнью класса и школы</div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="quick-start" class="section anchor">
+      <h2>План внедрения на три недели 🗓️</h2>
+      <ol class="steps">
+        <li><b>Неделя один</b> вводим роли на уроках. задаём ритуал старта и финала. запускаем комплимент дня</li>
+        <li><b>Неделя два</b> проводим первый проект за неделю. фиксируем вклад каждого</li>
+        <li><b>Неделя три</b> организуем мини‑дебаты и сбор обратной связи. делаем стенд достижений</li>
+      </ol>
+    </section>
+
+    <section class="section anchor">
+      <h2>Инструменты педагога 🧰</h2>
+      <div class="grid cols-3">
+        <div class="card"><h3>Лист роли</h3><p>Короткие описания ролей и чек‑поинтов. удобно для ротации</p></div>
+        <div class="card"><h3>Дневник лидера</h3><p>Три вопроса после урока. что получилось. что улучшить. какой шаг завтра</p></div>
+        <div class="card"><h3>Доска прогресса</h3><p>Видимые цели. этапы. благодарности одноклассников</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <div>💙 Памятка создана для учителей и классных руководителей. Свободное использование</div>
+
+  </footer>
+
+  <div class="sticky-bar">
+    <a class="mini" href="#role">🌟 Роль</a>
+    <a class="mini" href="#methods">🛠️ Методы</a>
+    <a class="mini" href="#practice">🧪 Практика</a>
+    <a class="mini" href="#checklist">👀 Чек‑лист</a>
+    <a class="mini" href="#mistakes">🧯 Ошибки</a>
+    <button class="mini" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Наверх</button>
+  </div>
+</body>
+</html>
