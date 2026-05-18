@@ -1,1 +1,0 @@
-# pamytka_ychitelym
